@@ -3,7 +3,7 @@ fetch('https://randomuser.me/api/?nat=us&results=12')
   .then((response) => { return response.json() })
   .then(data => { generateCard(data) })
 
-// Function to create a modal card with employee information
+// Function to create a generate a card with employee information
 function generateCard (data) {
   data.results.forEach((employee) => {
     const card = document.createElement('DIV')
@@ -25,7 +25,7 @@ function generateCard (data) {
     document.querySelector('#gallery').insertAdjacentElement('beforeend', card)
   })
 }
-// Function to create additional data for the modal
+// Function to create a modal with additional data for the employee
 function createModal (employees) {
   const modal = document.createElement('DIV')
   const loc = employees.location
