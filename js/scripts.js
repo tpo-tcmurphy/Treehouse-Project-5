@@ -3,7 +3,7 @@ fetch('https://randomuser.me/api/?nat=us&results=12')
   .then((response) => { return response.json() })
   .then(data => { generateCard(data) })
 
-// Function to create a generate a card with employee information
+// Function to generate a card with employee information
 function generateCard (data) {
   data.results.forEach((employee) => {
     const card = document.createElement('DIV')
