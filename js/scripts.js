@@ -35,7 +35,7 @@ function createModal (employees) {
   const month = birthday.substr(5, 2)
   const day = birthday.substr(8, 2)
   const year = birthday.substr(2, 2)
-  const formattedBday = `${month}/${day}/${year}`
+  const configureBday = `${month}/${day}/${year}`
 
   const generateModal = `
   <div class="modal">
@@ -48,7 +48,7 @@ function createModal (employees) {
     <hr>
     <p class="modal-text">${employees.cell.replace(/-/, ' ')}</p>
     <p class="modal-text">${street}, ${loc.state} ${loc.postcode}</p>
-    <p class="modal-text">Birthday: ${formattedBday}</p>
+    <p class="modal-text">Birthday: ${configureBday}</p>
   </div>
 </div>`
 
